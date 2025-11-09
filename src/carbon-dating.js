@@ -21,7 +21,7 @@ function dateSample(sampleActivity) {
   if (
     typeof sampleActivity == "string" &&
     parseFloat(sampleActivity) > 0 &&
-    parseFloat(sampleActivity) < HALF_LIFE_PERIOD
+    parseFloat(sampleActivity) <= HALF_LIFE_PERIOD
   ) {
     const LN2 = Math.LN2;
     const TIME =
