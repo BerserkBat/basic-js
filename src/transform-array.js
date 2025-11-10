@@ -19,9 +19,7 @@ function transform(arr) {
   }
   const result = [];
   const deleted = [];
-  //const skip = new Set();
   for (let i = 0; i < arr.length; i++) {
-    //if (skip.has(i)) continue;
     if (typeof arr[i] == "string") {
       switch (arr[i]) {
         case "--discard-next":

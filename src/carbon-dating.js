@@ -27,7 +27,11 @@ function dateSample(sampleActivity) {
     const TIME =
       (HALF_LIFE_PERIOD / LN2) *
       Math.log(MODERN_ACTIVITY / parseFloat(sampleActivity));
-    return Math.ceil(TIME);
+    if (TIME >= 0) {
+      return Math.ceil(TIME);
+    } else {
+      return false;
+    }
   } else {
     return false;
   }
